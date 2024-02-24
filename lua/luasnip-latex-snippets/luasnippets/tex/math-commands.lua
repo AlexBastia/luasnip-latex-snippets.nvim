@@ -75,6 +75,13 @@ M = {
       { c(1, { fmta([[_{<>}^{<>}]], { i(1, "i = 0"), i(2, "\\infty") }), t("") }), i(0) }),
     { condition = tex.in_math, show_condition = tex.in_math }),
 
+  autosnippet({ trig = "int", name = "integral", dscr = "integral" },
+    fmta(
+      "\int_{<>}^{<>}<>",
+      {i(1), i(2), i(0)}
+    ),
+    { condition = tex.in_math, show_condition = tex.in_math }),
+
   autosnippet({ trig = "prod", name = "product", dscr = "product" },
     fmta([[
     \prod<> <>
