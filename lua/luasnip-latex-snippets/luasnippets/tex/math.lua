@@ -77,7 +77,19 @@ local generate_cases = function(args, snip)
   return sn(nil, nodes)
 end
 
-M = {
+M = {  
+  -- Custom Snips
+  s({trig = '([%a%)%]%}])00', regTrig = true, wordTrig = false, snippetType="autosnippet"},
+    fmta(
+      "<>_{<>}",
+      {
+        f( function(_, snip) return snip.captures[1] end ),
+        t("0")
+      }
+    )
+  ),
+
+  
   -- Math modes
   autosnippet({ trig = "mk", name = "$..$", dscr = "inline math" },
     fmta([[
