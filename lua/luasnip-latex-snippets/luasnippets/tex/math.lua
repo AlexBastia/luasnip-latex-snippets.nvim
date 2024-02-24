@@ -79,7 +79,7 @@ end
 
 M = {  
   -- Custom Snips
-  s({trig = '([%a%)%]%}])(%d)', regTrig = true, wordTrig = false, snippetType="autosnippet"},
+  s({trig = '(%a)(%d)', name = "a_x", descr = "auto-subscript 1", regTrig = true, wordTrig = false, snippetType="autosnippet"},
     fmta(
       "<>_<>",
       {
@@ -90,7 +90,16 @@ M = {
     { condition = tex.in_math, show_condition = tex.in_math }
   ),
 
-  
+  s({trig = '(%a)_(%d%d)', name = "a_{xy}", descr = "auto-subscript 2", regTrig = true, wordTrig = false, snippetType="autosnippet"},
+    fmta(
+      "<>_{<>}",
+      {
+        f( function(_, snip) return snip.captures[1] end ),
+        f( function(_, snip) return snip.captures[2] end )
+      }
+    ),
+    { condition = tex.in_math, show_condition = tex.in_math }
+  ),  
   -- Math modes
   autosnippet({ trig = "mk", name = "$..$", dscr = "inline math" },
     fmta([[
