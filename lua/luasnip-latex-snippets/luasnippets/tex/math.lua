@@ -79,12 +79,12 @@ end
 
 M = {  
   -- Custom Snips
-  s({trig = '([%a%)%]%}])00', regTrig = true, wordTrig = false, snippetType="autosnippet"},
+  s({trig = '([%a%)%]%}])(%d+)', regTrig = true, wordTrig = false, snippetType="autosnippet"},
     fmta(
       "<>_{<>}",
       {
         f( function(_, snip) return snip.captures[1] end ),
-        t("0")
+        f( function(_, snip) return snip.captures[2] end )
       }
     )
   ),
