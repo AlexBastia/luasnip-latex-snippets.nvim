@@ -213,7 +213,7 @@ local symbol_specs = {
   ["-~"] = { context = { name = "⋍" }, command = [[\backsimeq]] },
   ["-="] = { context = { name = "≡" }, command = [[\equiv]] },
   ["=~"] = { context = { name = "≅" }, command = [[\cong]] },
-  [":="] = { context = { name = "≔" }, command = [[\definedas]] },
+  [":="] = { context = { name = "≔" }, command = [[\coloneq]] },
   ["**"] = { context = { name = "·", priority = 100 }, command = [[\cdot]] },
   xx = { context = { name = "×" }, command = [[\times]] },
   ["!+"] = { context = { name = "⊕" }, command = [[\oplus]] },
