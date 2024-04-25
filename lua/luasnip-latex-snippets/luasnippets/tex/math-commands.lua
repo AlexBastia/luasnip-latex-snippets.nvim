@@ -132,7 +132,13 @@ M = {
     { condition = tex.in_math, show_condition = tex.in_math }),
   autosnippet({ trig = 'grad', name = 'gradient', dscr = 'gradient' },
     fmta([[
-    \nabla<>
+    \nabla <>
+    ]],
+      { i(0) }),
+    { condition = tex.in_math, show_condition = tex.in_math }),
+  autosnippet({ trig = 'part', name = 'partial', dscr = 'Partial symbol' },
+    fmta([[
+    \partial <>
     ]],
       { i(0) }),
     { condition = tex.in_math, show_condition = tex.in_math }),
