@@ -130,6 +130,12 @@ M = {
     ]],
       { i(1), i(2), i(0) }),
     { condition = tex.in_math, show_condition = tex.in_math }),
+  autosnippet({ trig = 'grad', name = 'gradient', dscr = 'gradient' },
+    fmta([[
+    \nabla<>
+    ]],
+      { i(0) }),
+    { condition = tex.in_math, show_condition = tex.in_math }),
 }
 
 -- Auto backslashes
