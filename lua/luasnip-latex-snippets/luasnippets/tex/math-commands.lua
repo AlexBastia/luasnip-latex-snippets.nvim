@@ -154,6 +154,12 @@ M = {
     ]],
       { i(1),i(0) }),
     { condition = tex.in_math, show_condition = tex.in_math }),
+  autosnippet({ trig = 'no', name = 'Norm', dscr = 'Four vertical lines norm (from physics package)' },
+    fmta([[
+    \norm{<>}<>
+    ]],
+      { i(1),i(0) }),
+    { condition = tex.in_math, show_condition = tex.in_math }),
 }
 
 -- Auto backslashes
