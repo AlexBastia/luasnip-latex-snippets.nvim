@@ -21,6 +21,15 @@ local in_bullets_cond = make_condition(tex.in_bullets)
 local line_begin = require("luasnip.extras.conditions.expand").line_begin
 
 M = {
+  s({ trig = 'fig', name = 'figure', dscr = 'template to add a centered image' },
+    fmta([[
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.5\textwidth]{<>}
+    \end{figure}<>
+    ]],
+      { i(1), i(0) }
+    ), { condition = tex.in_text, show_condition = tex.in_text }),
   s({ trig = 'beg', name = 'begin/end', dscr = 'begin/end environment (generic)' },
     fmta([[
     \begin{<>}
